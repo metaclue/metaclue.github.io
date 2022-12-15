@@ -38,27 +38,18 @@
   <h2>Introducing MetaCLUE</h2>
   <p> Much of the computer vision focus on literal interpretation of images. We introduce, MetaCLUE, consisting of four interesting tasks (Classification, Understanding, Localization and Generation) related to metaphorical interpretation and generation of images. </p>
   <br>
-  <h2>Classification</h2>
-  <p> </p>
-  <img class="summary-img" src="./MetaCLUE_files/high_level.png" style="width:100%;"> <br>
-  <h2>Understanding</h2>
-  <img class="summary-img" src="./MetaCLUE_files/high_level.png" style="width:100%;"> <br>
-  <h2>Localization</h2>
-  <img class="summary-img" src="./MetaCLUE_files/high_level.png" style="width:100%;"> <br>
-  <h2>Generation</h2>
-  <img class="summary-img" src="./MetaCLUE_files/high_level.png" style="width:100%;"> <br>
+  <h2>Results</h2>
+  We show models  struggle  to  produce  satisfactory  results  in  many cases, demonstrating the difficulty of these tasks. Below are some examples:
+  <img class="summary-img" src="./MetaCLUE_files/pali.png" style="width:100%;"> <br>
+  
+  <img class="summary-img" src="./MetaCLUE_files/localization.png" style="width:100%;"> <br>
+  
+  <img class="summary-img" src="./MetaCLUE_files/generation.png" style="width:100%;"> <br>
+  
   
 </div>
-  <div class="content">
-  <h2>MetaCLUE: Classification Task</h2>
-  <p> Much of the computer vision focus on literal interpretation of images. We introduce, MetaCLUE, consisting of four interesting tasks (Classification, Understanding, Localization and Generation) related to metaphorical interpretation and generation of images. We collect high-quality and rich metaphor annotations that facilitate evaluating state-of-the-art models on these tasks.</p>
-  <br>
-  <img class="summary-img" src="./MetaCLUE_files/high_level.png" style="width:100%;"> <br>
-  <p>Given ~3-5 images of a subject we fine tune a text-to-image diffusion in two steps: (a) fine tuning the low-resolution text-to-image model with the input images paired with a text prompt containing a unique identifier and the name of the class the subject belongs to (e.g., "A photo of a [T] dog”), in parallel, we apply a class-specific prior preservation loss, which leverages the semantic prior that the model has on the class and encourages it to generate diverse instances belong to the subject's class by injecting the class name in the text prompt (e.g., "A photo of a dog”). (b) fine-tuning the super resolution components with pairs of low-resolution and high-resolution images taken from our input images set, which enables us to maintain high-fidelity to small details of the subject.</p>
-  <br>
-  <img class="summary-img" src="./MetaCLUE_files/system.png" style="width:100%;"> <br>
-</div>
-<div class="content">
+  
+<!-- <div class="content">
   <h2>Results</h2>
   <p>Results for re-contextualization of a bag and vase subject instances. By finetuning a model using our method we are able to generate different images of the a subject instance in different environments, with high preservation of subject details and realistic interaction between the scene and the subject. We display the conditioning prompts below each image. </p>
 <img class="summary-img" src="./MetaCLUE_files/results.png" style="width:100%;">
@@ -86,7 +77,7 @@
   <p>Outfitting a dog with accessories. The identity of the subject is preserved and many different outfits or accessories can be applied to the dog given a prompt of type <em>"a [V] dog wearing a police/chef/witch outfit''</em>. We observe a realistic interaction between the subject dog and the outfits or accessories, as well as a large variety of possible options.</p>
   <br>
   <img class="summary-img" src="./MetaCLUE_files/accessories.png" style="width:100%;"> <br>
-</div>
+</div> -->
 <!-- <div class="content">
   <h2>Societal Impact</h2>
   <p>This project aims to provide users with an effective tool for synthesizing personal subjects (animals, objects) in different contexts. While general text-to-image models might be biased towards specific attributes when synthesizing images from text, our approach enables the user to get a better reconstruction of their desirable subjects. On contrary, malicious parties might try to use such images to mislead viewers. This is a common issue, existing in other generative models approaches or content manipulation techniques. Future research in generative modeling, and specifically of personalized generative priors, must continue investigating and revalidating these concerns.</p>
